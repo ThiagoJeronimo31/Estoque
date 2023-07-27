@@ -9,19 +9,18 @@ public class Estoque {
 
         Scanner sc = new Scanner(System.in);
         
-        Calcestoque cE = new Calcestoque();
+      
         System.out.println("Enter product data: ");
         System.out.print("Name: ");
-        cE.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.print("Price: ");
-        cE.price = sc.nextDouble();
+        double price = sc.nextDouble();
         System.out.println("Quantity in stock: ");
-        cE.quantity = sc.nextInt();
+        int quantity = sc.nextInt();
+        Calcestoque cE = new Calcestoque(name,price,quantity);
         
         System.out.println(cE);
-        
-        int quantity;
-        System.out.println("");
+        System.out.println("");  
         System.out.println("Enter the number of products to be added in Stock: ");
         quantity = sc.nextInt();
         cE.addProducts(quantity);
@@ -35,9 +34,8 @@ public class Estoque {
         cE.removeProducts(quantity);
         
         System.out.println("Updated data: "+cE);
-        
-        
-        
+         
+                
         
         
         
